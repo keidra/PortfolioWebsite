@@ -18,3 +18,7 @@ $('a[href^="#"]').on('click', function(event) {
     }
 
 });
+
+
+/* HIDE NAVBAR*/
+

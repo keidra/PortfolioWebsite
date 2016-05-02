@@ -199,11 +199,14 @@ body > div.row {
 body > div:nth-child(7) {
   margin-left: 160px;
   width: 100%;
-  margin-top: 90px;
+  margin-top: 111px;
 }
 
-
-
+i.right {
+    float: right;
+    margin-left: 15px;
+    margin-top: 13px;
+}
 
 
  /* CONTACT */
@@ -213,7 +216,7 @@ body > div:nth-child(11) {
 }
 
 body > h5:nth-child(10) {
-  margin-top: 10px;
+  margin-top: 150px;
 }
 
 .divider {
@@ -221,3 +224,38 @@ body > h5:nth-child(10) {
     overflow: hidden;
     background-color: transparent;
 }
+
+
+/* FOOTER */
+
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    height: 64px;
+    line-height: 40px;
+    color: black;
+    background-color: transparent;
+    border-top: 1px solid black;
+}
+
+/* ABOUT */
+
+#sec4 > div > div > img {
+      width: 45%;
+    /* display: inherit; */
+    margin-left: 337px;
+}
+
+#sec4 > div > div > p {
+    text-align: center;
+    font-family: 'Pathway Gothic One';
+    font-size: 23px;
+    width: 75%;
+    margin-left: 130px;
+    margin-top: 40px;
+}
+
+
+
+
+
+

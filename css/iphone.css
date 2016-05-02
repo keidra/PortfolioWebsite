@@ -103,6 +103,40 @@
   color: #ddd;
 }
 
+#sec4 > div > div > img {
+    width: 70%;
+    /* display: inherit; */
+    margin-left: 55px;
+}
+
+#sec4 > div > div > p {
+    text-align: block;
+    font-family: 'Pathway Gothic One';
+    font-size: 23px;
+    width: 75%;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+
+body > div:nth-child(7) {
+    margin-left: 40px;
+    width: 80%;
+    margin-top: 30px;
+}
+
+body > h5:nth-child(10) {
+    margin-top: 50px;
+}
+
+body > div:nth-child(11) {
+    margin-top: 30px;
+}
+
+body > div.section > h5 {
+  margin-top: 30px;
+}
+
 }
 
 /* Landscape */
