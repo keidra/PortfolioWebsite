@@ -36,66 +36,14 @@ nav a {
     padding: 0 30px;
 }
 
-/* FOOTER */
-
-footer.page-footer {
-    margin-top: 20px;
-    padding-top: 20px;
-    background-color: white;
-    font-family: 'Coda';
-}
-
-.white-text {
-    color: black !important;
-    font-family: 'Coda';
-    text-align: center;
-}
-
-.grey-text.text-lighten-4 {
-    color: black !important;
-    font-family: 'Coda';
-}
-
-.grey-text.text-lighten-3 {
-    color: black !important;
-    font-family: 'Coda';
-}
-
-footer.page-footer .footer-copyright {
-    overflow: hidden;
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    background-color: rgba(51,51,51,0.08);
-}
-
-body > footer > div.footer-copyright > div {
-  text-align: center;
-}
-
-a {
-  font-family: sans-serif;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-}
-
-button{ 
-  float: right;
-  color: gray;
-  margin-right: 20px;
-  margin-bottom: 20px;
- }
-
- #bottom {
-  font-family: helvetica;
-  color: black;
-}
-
 /* LOGO */
+
+#section0 > div > img {
+  margin: 0 auto  ;
+}
+
 .logo {
   width: 50%;
-  margin-top: 75px;
 }
 
 #star {
@@ -105,120 +53,7 @@ button{
   color: #ddd;
 }
 
-/* MY WORK */
-
-.work {
-  text-align: center;
-}
-
-h5 {
-    font-size: 6.64rem;
-    line-height: 110%;
-    margin: 0.82rem 0 0.656rem 0;
-    font-family: 'Pathway Gothic One';
-    text-align: center;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body > h5:nth-child(6) {
-  margin-top: 30px;
-}
-
-.card .card-content {
-    padding: 20px;
-    border-radius: 0 0 2px 2px;
-    text-align: center;
-}
-
-body > div.row > div:nth-child(2) > div > div.card-content > p > a.fa.fa-external-link.fa-3x {
-    padding-left: 10px;
-    padding-top: 15px;
-}
-
-body > div.row > div:nth-child(1) > div > div.card-content > p > a.fa.fa-external-link.fa-3x {
-   padding-left: 10px;
-   padding-top: 15px;
-}
-
-body > div.row > div:nth-child(2) > div > div.card-image.waves-effect.waves-block.waves-light > img {
-  width: 86%;
-  margin-left: 28px;
-}
-
-body > div.row > div:nth-child(3) > div > div.card-image.waves-effect.waves-block.waves-light > img {
-    width: 49%;
-    margin-left: 74px;
-    margin-top: 11px;
-}
-
-.fa-2x {
-    font-size: 2em;
-    padding-left: 25px;
-}
-
-.card .card-content p {
-    margin: 0;
-    color: inherit;
-    margin-left: -22px;
-}
-
-body > div.row > div:nth-child(2) > div > div.card-content > span {
-      margin-left: 34px;
-      font-family: 'Pathway Gothic One';
-}
-
-body > div.row > div:nth-child(1) > div > div.card-content > span {
-      font-family: 'Pathway Gothic One';
-      margin-left: 30px;
-
-}
-
-.card .card-content .card-title {
-    line-height: 48px;
-    font-size: 30px;
-}
-
-body > div.work > h5 {
-  font-family: 'Pathway Gothic One';
-}
-
-body > div.row > div:nth-child(3) > div > div.card-content > span {
-  font-family: 'Pathway Gothic One';
-  margin-left: 36px;
-}
-
-body > div.row {
-  margin-bottom: 250px;
-}
-
-body > div:nth-child(7) {
-  margin-left: 160px;
-  width: 100%;
-  margin-top: 111px;
-}
-
-i.right {
-    float: right;
-    margin-left: 15px;
-    margin-top: 13px;
-}
-
-
  /* CONTACT */
-
-body > div:nth-child(11) {
-  margin-top: 70px;
-}
-
-body > h5:nth-child(10) {
-  margin-top: 150px;
-}
-
 .divider {
     height: 1px;
     overflow: hidden;
@@ -228,21 +63,14 @@ body > h5:nth-child(10) {
 
 /* FOOTER */
 
-footer.page-footer .footer-copyright {
-    overflow: hidden;
-    height: 64px;
-    line-height: 40px;
-    color: black;
-    background-color: transparent;
-    border-top: 1px solid black;
-}
 
 /* ABOUT */
 
 #sec4 > div > div > img {
-      width: 45%;
+      width: 30%;
     /* display: inherit; */
-    margin-left: 337px;
+    margin-left: 450px;
+    margin-top: 10px;
 }
 
 #sec4 > div > div > p {
@@ -254,8 +82,105 @@ footer.page-footer .footer-copyright {
     margin-top: 40px;
 }
 
+#sec4 > div > div > img {
+  margin: 0 auto;
+}
+
+
+/* CURSOR */ 
+
+a {
+  cursor: crosshair;
+}
+
+button {
+  cursor: crosshair;
+}
+
+html {
+  cursor: crosshair;
+}
+
+
+/* MY WORK HEADING */
+#slide1 > div > h1 {
+  font-size: 6.64rem;
+  line-height: 110%;
+  margin: 0.82rem 0 0.656rem 0;
+  font-family: 'Work Sans';
+  text-align: center;
+}
+
+body > h5:nth-child(6) {
+  margin-top: 30px;
+}
+
+body > div.work > h5 {
+  font-family: 'Pathway Gothic One';
+}
+
+/* MY WORK */
+
+#what {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#chill {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#water {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#code {
+  width: 750px;
+  margin: 0 auto;
+}
+
+#word {
+  width: 750px;
+  margin: 0 auto;
+}
+
+p.work {
+  font-size: 1.5em;
+}
+
+.work {
+  text-align: center;
+}
+
+h5 {
+    font-size: 6.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+    font-family: 'Work Sans';
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.fa-2x {
+    font-size: 2em;
+    padding-left: 25px;
+}
 
 
 
 
+/* PREVIOUS && NEXT ARROWS */
+#section1 > div.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent rgba(0,0,0,.2);
+}
 
+#section1 > div.fp-controlArrow.fp-prev {
+  border-color: transparent rgba(0,0,0,.2) transparent transparent;
+}
