@@ -1,3 +1,22 @@
+body {
+    background: url(/img/brilliant.png);
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+    .section,
+    .slide,
+    .fp-tableCell{
+        height: 100vh;
+    }
 
 
 /*  MAIN NAV-BAR */
@@ -8,179 +27,553 @@ nav {
     width: 100%;
     height: 56px;
     line-height: 56px;
-   /* border-bottom: .5px solid black;*/
+    /* border-bottom: .5px solid black;*/
 }
-
 nav ul a {
     transition: background-color .3s;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     display: inline-block;
     padding: 0 15px;
     cursor: pointer;
     font-family: 'Pathway Gothic One';
 }
-
 nav a {
     color: black;
 }
-
-/* SIDE NAV-BAR */
-
-.side-nav a {
-    color: black;
-    display: block;
-    font-size: 1.5rem;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 30px;
+nav {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    padding: 20px;
+    background: #000;
+    border-radius: 40px;
+    opacity: .4;
+    cursor: pointer;
+    z-index: 1000;
 }
-
+nav:hover {
+    opacity: .6;
+}
+.bt-menu ul:first-of-type li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-transform: translate3d(-100%, 50%, 0);
+    transform: translate3d(-100%, 50%, 0);
+}
+.bt-menu.bt-menu-open ul:first-of-type li {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.bt-menu ul li {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+    transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+}
+.bt-menu.bt-menu-open ul:first-of-type li,
+.bt-menu.bt-menu-open ul:nth-of-type(2) li {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.bt-menu-open .bt-menu-trigger span:after {
+    -webkit-transform: translateY(300%);
+    transform: translateY(300%);
+}
+.bt-menu ul {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bt-menu ul:first-of-type {
+    top: 75px;
+    left: 0;
+}
+#bt-menu > ul {
+    display: inline-flex;
+    top: 12px;
+    left: 305px;
+    margin: 0 auto;
+}
+.bt-menu-trigger span:before {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%);
+}
+.bt-menu-trigger span:after {
+    -webkit-transform: translateY(250%);
+    transform: translateY(250%);
+}
+.bt-menu-open .bt-menu-trigger span:before {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+.bt-menu-trigger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 8%;
+    background-color: black;
+    font-size: 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.bt-overlay {
+    position: absolute;
+    /*  width: 100%;*/
+}
+.bt-menu-open .bt-overlay {
+    height: 100%;
+}
+.bt-menu-trigger {
+    position: fixed;
+    top: 10px;
+    /* left: 614px;*/
+    
+    z-index: 100;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.bt-menu.bt-menu-open {
+    /*height: 100%;
+  border-width: 0px 0px 50px 150px;*/
+    
+    background-color: transparent;
+    -webkit-transition: border-width 0.3s, background-color 0.3s;
+    transition: border-width 0.3s, background-color 0.3s;
+}
+.container {
+    padding: 80px;
+}
+.bt-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: transparent;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+    transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+}
 /* LOGO */
 
 #section0 > div > img {
-  margin: 0 auto  ;
+    margin: 0 auto;
+    margin-top: 20px;
 }
-
 .logo {
-  width: 50%;
+    width: 50%;
 }
-
 #star {
-  text-align: center;
-  font-size: 100px;
-  line-height: 1000px;
-  color: #ddd;
+    text-align: center;
+    font-size: 100px;
+    line-height: 1000px;
+    color: #ddd;
 }
+/* CONTACT */
 
- /* CONTACT */
 .divider {
     height: 1px;
     overflow: hidden;
     background-color: transparent;
 }
-
-
+#section3 > div > h5 {
+    margin-top: -250px;
+}
 /* FOOTER */
 
-
+#section3 > div > footer {
+    margin-top: 36px;
+    font-family: 'Pathway Gothic One';
+}
 /* ABOUT */
 
 #sec4 > div > div > img {
-      width: 30%;
+    width: 27%;
     /* display: inherit; */
+    
     margin-left: 450px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
-
+#sec5 > div > div > img {
+    width: 25%;
+    /* display: inherit; */
+    
+    margin-left: 450px;
+    margin-top: 30px;
+}
 #sec4 > div > div > p {
     text-align: center;
     font-family: 'Pathway Gothic One';
     font-size: 23px;
-    width: 75%;
-    margin-left: 130px;
-    margin-top: 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: black;
 }
-
+#sec5 > div > div > p {
+    text-align: center;
+    font-family: 'Pathway Gothic One';
+    font-size: 23px;
+    margin: 0 auto;
+    margin-top: 27px;
+    color: black;
+}
 #sec4 > div > div > img {
-  margin: 0 auto;
+    margin: 0 auto;
 }
-
-
-/* CURSOR */ 
+#sec5 > div > div > img {
+    margin: 0 auto;
+}
+.img-circle {
+    border-radius: 50%;
+}
+p.about {
+    font-size: 1.20em !important;
+    line-height: 22px;
+}
+#sec4 > div > div {
+    width: 900px;
+    margin: 0 auto;
+    height: 550px;
+    padding: 100px;
+    border: 1px solid black;
+    margin-top: 90px;
+}
+#sec5 > div > div {
+    width: 900px;
+    margin: 0 auto;
+    height: 550px;
+    padding: 100px;
+    border: 1px solid black;
+    margin-top: 90px;
+}
+#sec4 > div > div > h5 {
+    margin-top: -77px;
+    margin-bottom: 5px;
+}
+#sec5 > div > div > h5 {
+    margin-top: -77px;
+    margin-bottom: -25px;
+}
+#sec4 > div {
+    margin-top: -40px;
+}
+#sec5 > div {
+    margin-top: -40px;
+}
+/* CURSOR */
 
 a {
-  cursor: crosshair;
+    cursor: crosshair;
 }
-
 button {
-  cursor: crosshair;
+    cursor: crosshair;
 }
-
 html {
-  cursor: crosshair;
+    cursor: crosshair;
 }
-
-
+a: hover {
+    cursor: crosshair;
+}
 /* MY WORK HEADING */
+
 #slide1 > div > h1 {
-  font-size: 6.64rem;
-  line-height: 110%;
-  margin: 0.82rem 0 0.656rem 0;
-  font-family: 'Work Sans';
-  text-align: center;
+    font-size: 4.64rem;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+    font-family: 'Work Sans';
+    text-align: center;
+    color: black;
 }
-
 body > h5:nth-child(6) {
-  margin-top: 30px;
+    margin-top: 30px;
 }
-
 body > div.work > h5 {
-  font-family: 'Pathway Gothic One';
+    font-family: 'Pathway Gothic One';
+    color: black;
 }
-
+h1 {
+    font-size: 6em;
+    font-family: 'Work Sans';
+    color: black;
+}
+p {
+    font-size: 2em;
+    font-family: 'Pathway Gothic One';
+    color: black;
+}
+.viewWork {
+    width: 75%;
+    margin: 0 auto;
+}
+.section {
+    text-align: center;
+}
 /* MY WORK */
 
-#what {
-  width: 750px;
-  margin: 0 auto;
-}
-
-#chill {
-  width: 750px;
-  margin: 0 auto;
-}
-
-#water {
-  width: 750px;
-  margin: 0 auto;
-}
-
-#code {
-  width: 750px;
-  margin: 0 auto;
-}
-
+#what,
+#chill,
+#water,
+#code,
 #word {
-  width: 750px;
-  margin: 0 auto;
+    width: 900px;
+    margin: 0 auto;
+    height: 550px;
+    padding: 100px;
+    border: 1px solid black;
 }
-
+#what > h1 {
+    margin-top: -80px;
+    margin-bottom: 25px;
+}
+#chill > h1 {
+    margin-top: -80px;
+    margin-bottom: 25px;
+}
+#water > h1 {
+    margin-top: -80px;
+    margin-bottom: 25px;
+}
+#code > h1 {
+    margin-top: -80px;
+    margin-bottom: 25px;
+}
+#word > h1 {
+    margin-top: -80px;
+    margin-bottom: 25px;
+    font-size: 5.3em;
+}
 p.work {
-  font-size: 1.5em;
+    font-size: 1.25em;
 }
-
 .work {
-  text-align: center;
+    text-align: left;
 }
-
+#what > p:nth-child(2) > i {
+    margin-left: 10px;
+}
+#code > p:nth-child(5) {
+    margin-top: 30px;
+}
+#word > p:nth-child(4) {
+    margin-top: 30px;
+}
 h5 {
     font-size: 6.64rem;
     line-height: 110%;
     margin: 0.82rem 0 0.656rem 0;
     font-family: 'Work Sans';
     text-align: center;
+    color: black;
 }
-
 a {
     color: black;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
-
 .fa-2x {
     font-size: 2em;
     padding-left: 25px;
 }
-
-
-
-
 /* PREVIOUS && NEXT ARROWS */
-#section1 > div.fp-controlArrow.fp-next {
-  border-color: transparent transparent transparent rgba(0,0,0,.2);
-}
 
+#section1 > div.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent black;
+}
 #section1 > div.fp-controlArrow.fp-prev {
-  border-color: transparent rgba(0,0,0,.2) transparent transparent;
+    border-color: transparent black transparent transparent;
+}
+.bt-menu-trigger {
+    position: fixed;
+    bottom: 22px;
+    /* left: 50%; */
+    
+    z-index: 100;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+/*#bt-menu > ul > li:nth-child(1) {
+    margin-top: 60px;
+}*/
+
+#bt-menu > ul {
+    font-size: 22px;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: #bbb5af;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: #bbb5af;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+input:focus::placeholder,
+textarea::focus:placeholder {
+    color: #bbb5af;
+}
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: #bbb5af;
+}
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #cbc6c1;
+}
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #cbc6c1;
+}
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #cbc6c1;
+}
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #cbc6c1;
+}
+header {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
+}
+#form {
+    position: relative;
+    width: 470px;
+    margin: 0 auto;
+    top: 33px;
+}
+input {
+    font-family: 'Pathway Gothic One';
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+input:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 75px;
+    max-height: 110px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    font-family: 'Pathway Gothic One';
+    font-size: 0.875em;
+    border: solid 1px #b3aca7;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+textarea:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+#submit {
+    width: 150px;
+    padding: 0;
+    margin: 12px 0px 0px 0px;
+    font-family: 'Pathway Gothic One';
+    font-size: 0.875em;
+    color: #000000;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+}
+#submit:hover {
+    color: #e2dedb;
+}
+#message,
+#email,
+#name {
+    font-family: 'Pathway Gothic One';
+    color: black;
+}
+textarea {
+    resize: none;
 }

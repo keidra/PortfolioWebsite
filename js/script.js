@@ -1,21 +1,11 @@
- /*BUTTON COLLAPSE*/
+/*LOAD FULLPAGE */
+
+$('#fullpage').fullpage({
+         anchors: ['home', 'work', 'about', 'contact'],
+         scrollingSpeed: 600
+});
+
+
+
+
  
- $( document ).ready(function(){
-    $('#fullpage').fullpage();
-
-    $(".button-collapse").sideNav();
-
-
-    /* SNAP TO SCROLL */
-    $('a[href^="#"]').on('click', function(event) {
-
-        var target = $( $(this).attr('href') );
-
-        if( target.length ) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }
-    });
- });
